@@ -1,0 +1,49 @@
+{
+  "name": "shenbianyun-lingong-platform",
+  "version": "1.0.0",
+  "description": "身边云灵工平台专业介绍网站",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server .",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "npx cleancss -o css/styles.min.css css/styles.css",
+    "minify-js": "npx terser js/main.js -o js/main.min.js -c -m",
+    "deploy": "npm run build && npx gh-pages -d ."
+  },
+  "keywords": [
+    "灵活用工",
+    "灵工平台",
+    "合规用工",
+    "税务优化",
+    "身边云",
+    "企业展示",
+    "响应式网站"
+  ],
+  "author": "身边云团队",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shenbianyun/lingong-platform-site.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shenbianyun/lingong-platform-site/issues"
+  },
+  "homepage": "https://shenbianyun.github.io/lingong-platform-site",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "gh-pages": "^6.1.0",
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1",
+    "terser": "^5.26.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
